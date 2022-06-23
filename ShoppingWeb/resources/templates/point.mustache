@@ -1,0 +1,30 @@
+{{>layout/header}}
+
+<h2>포인트 충전소</h2>
+
+<div class="col-md-12">
+    <div class="col-md-4">
+        <form>
+            <div class="form-group">
+                {{#email}}
+                    {{email}}님, <br>
+                {{/email}}
+                {{#point}}
+                    현재 포인트:
+                    <input type="number" id="point" value={{point}} disabled> <br>
+                {{/point}}
+                충전할 금액:
+                <input type="number" id="depositPoint"> <br>
+                {{#id}}
+                    <input type="number" id="id" value={{id}} hidden>
+                {{/id}}
+
+            </div>
+        </form>
+        <button type="button" class="btn btn-primary" id="btn-point">충전</button>
+        <a href="/" role="button" class="btn btn-secondary">취소</a>
+    </div>
+</div>
+
+
+{{>layout/footer}}
